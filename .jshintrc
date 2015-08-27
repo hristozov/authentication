@@ -1,0 +1,23 @@
+{
+	"globals": {
+	},
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": true,
+	"forin": true,
+	"globalstrict": false,
+	"immed": true,
+	"maxcomplexity": 6,
+	"maxdepth": 3,
+	"maxlen": 80,
+	"maxparams": 4,
+	"maxstatements": 15,
+	"newcap": true,
+	"noempty": true,
+	"nonew": true,
+	"quotmark": true,
+	"smarttabs": true,
+	"trailing": true,
+	"undef": false,
+	"unused": false
+}
