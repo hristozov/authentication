@@ -6,9 +6,13 @@ var path = require('path');
 var http = require('http');
 var mongodb = require('mongodb');
 var monk = require('monk');
+var mongoose = require('mongoose');
 var auth = require('./auth');
+var UserModel = require('./user-model');
 
-var db = monk('localhost:27017/users');
+var connectionString = 'localhost:27017',
+    connection = mongoose.createConnection(connectionString),
+    userModel = new userModel(connection);
 
 var app = express();
 
@@ -21,7 +25,7 @@ app.use(cookieParser());
 app.use(session({ secret: 'secret' }));
 
 app.use(function(req, res, next) {
-  req.db = db;
+  req.userModel = userModel;
 
   var err = req.session.error;
   var msg = req.session.success;
